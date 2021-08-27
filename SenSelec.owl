@@ -1,0 +1,2168 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#"
+     xml:base="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec/1.0.0"/>
+        <rdfs:comment xml:lang="en">This is an ontology about the system&apos;s second version.
+It includes the original name: SenSelec.
+It also shows no errors while launching the Reasoner.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#canBePerformedby -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#canBePerformedby">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#canPerform"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Robot"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#canPerform -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#canPerform">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Robot"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#hasDevice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#hasDevice">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#isDeviceof"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Device"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Robot"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#hasSkill -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#hasSkill">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#isSkillof"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Device"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Robot"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#isAssignedDevice -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#isAssignedDevice">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#isAssignedtoTask"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#isAssignedTask -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#isAssignedTask">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#isAssignedtoRobot"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Robot"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#isAssignedtoRobot -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#isAssignedtoRobot">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Robot"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#isAssignedtoTask -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#isAssignedtoTask">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Device"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#isDeviceof -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#isDeviceof">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Device"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Device"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Robot"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#isRequiredby -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#isRequiredby">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#requires"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Device"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#isSkillof -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#isSkillof">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Device"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Robot"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#needs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#needs">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#requires -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#requires">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#accuracy -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#accuracy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Sensing_Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#available -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#available">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Device"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Robot"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#dynamicError -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#dynamicError">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Sensing_Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#fieldofView -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#fieldofView">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Distance_Sensor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Proximity_Sensor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Vision_Sensor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#frequency -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#frequency">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Sensing_Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#humidity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#humidity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Environment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#inCondition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#inCondition">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Device"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Robot"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#inExecution -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#inExecution">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#lattency -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#lattency">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Sensing_Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#lighting -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#lighting">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Distance_Sensor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Environment"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Proximity_Sensor"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Vision_Sensor"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#linearity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#linearity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Sensing_Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#maxMeasurement -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#maxMeasurement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Sensing_Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#minMeasurement -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#minMeasurement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Sensing_Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#offset -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#offset">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Sensing_Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#reflectionDegree -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#reflectionDegree">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Environment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#repeatability -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#repeatability">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Sensing_Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#resolution -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#resolution">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Sensing_Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#responseTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#responseTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Sensing_Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#sensitivity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#sensitivity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Sensing_Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#speed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#speed">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#AC_Electric_Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#AC_Electric_Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Electric_Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#AHRS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#AHRS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Integrated_INS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#ALU -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#ALU">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Processing_Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Absolut_Encoder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Absolut_Encoder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Absolut_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Absolut_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Absolut_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Digital_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Accelerometer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Accelerometer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Inertial_Navegation_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Active_Stereo_RGB-D_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Active_Stereo_RGB-D_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#RGB-D_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Actuating_Device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Actuating_Device">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Analog_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Analog_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Odometric_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Analog_Velocity_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Analog_Velocity_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Angular_Velocity_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Angular_Position_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Angular_Position_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Analog_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Angular_Velocity_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Angular_Velocity_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Velocity_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Arc_Welding_Tool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Arc_Welding_Tool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Welding_Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Assembly_Tool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Assembly_Tool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Specific_Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Async_AC_Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Async_AC_Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#AC_Electric_Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Brushless_Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Brushless_Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Electronic_Switching_Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Bumper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Bumper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Touch_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#CPU -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#CPU">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Processing_Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Capacitive_Accelerometer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Capacitive_Accelerometer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Accelerometer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Capacitive_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Capacitive_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Contactless_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Communicating_Device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Communicating_Device">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Computer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Computer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Processing_Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Contactless_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Contactless_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Proximity_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Control_Unit -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Control_Unit">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Processing_Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Coumpound_Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Coumpound_Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Wound_Rotor_Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Cylinder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Cylinder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Actuating_Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#DC_Electric_Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#DC_Electric_Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Electric_Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Deburring_Tool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Deburring_Tool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Machining_Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Device"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Digital_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Digital_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Odometric_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Digital_Velocity_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Digital_Velocity_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Angular_Velocity_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Distance_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Distance_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Exteroceptive_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Drilling_Tool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Drilling_Tool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Machining_Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Electric_Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Electric_Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Electromechanical_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Electromechanical_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Touch_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Electronic_Switching_Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Electronic_Switching_Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#DC_Electric_Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#End_Effector -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#End_Effector">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Actuating_Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Actuating_Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Environment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Environment"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Exteroceptive_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Exteroceptive_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Sensing_Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Flying_Robot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Flying_Robot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Robot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Foucault_Currents -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Foucault_Currents">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Inductive_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#GPS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#GPS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Satellite-based_Positioning_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Gauges_Accelerometer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Gauges_Accelerometer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Accelerometer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Grinding_Tool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Grinding_Tool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Machining_Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Gripper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Gripper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#End_Effector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Gyrometer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Gyrometer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Analog_Velocity_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Gyroscope -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Gyroscope">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Inertial_Navegation_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Hall_Effect_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Hall_Effect_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Contactless_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Heat_Torch -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Heat_Torch">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Specific_Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Humidity_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Humidity_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Exteroceptive_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Hybrid_Step_Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Hybrid_Step_Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Step_Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Hydraulic_Cylinder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Hydraulic_Cylinder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Cylinder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Hydraulic_Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Hydraulic_Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#IMU -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#IMU">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Integrated_INS"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Inclinometer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Inclinometer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Inertial_Navegation_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Incremental_Optical_Encoder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Incremental_Optical_Encoder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Incremental_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Incremental_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Incremental_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Digital_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Inductive_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Inductive_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Contactless_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Inductosyn -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Inductosyn">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Linear_Position_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Inertial_Navegation_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Inertial_Navegation_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Propioceptive_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Integrated_INS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Integrated_INS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Inertial_Navegation_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Internal_Temperature_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Internal_Temperature_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Propioceptive_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#LDR -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#LDR">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Optical_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#LVDT -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#LVDT">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Linear_Position_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#LVDT_Accelerometer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#LVDT_Accelerometer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Accelerometer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Laser -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Laser">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Linear_Position_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Leaching_Mine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Leaching_Mine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Mine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Legged_Robot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Legged_Robot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Robot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Lidar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Lidar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Distance_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Linear_Optical_Ruler -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Linear_Optical_Ruler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Incremental_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Linear_Position_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Linear_Position_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Analog_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Linear_Potentiometer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Linear_Potentiometer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Linear_Position_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Linear_Tachometer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Linear_Tachometer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Linear_Velocity_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Linear_Velocity_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Linear_Velocity_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Velocity_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Machining_Tool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Machining_Tool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Specific_Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Magnetic_Compass -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Magnetic_Compass">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Inertial_Navegation_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Magnetic_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Magnetic_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Contactless_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Magnetoresistor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Magnetoresistor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Magnetic_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Magnetostrictive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Magnetostrictive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Linear_Position_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Microphone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Microphone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Receiver"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Milling_Tool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Milling_Tool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Machining_Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Mine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Mine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Environment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Navigating_Robot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Navigating_Robot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Robot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Nutdriver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Nutdriver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Assembly_Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Odometric_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Odometric_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Propioceptive_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Open-pit_Mine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Open-pit_Mine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Mine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Optical_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Optical_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Contactless_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Other_Electric_Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Other_Electric_Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Electric_Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#PM_DC_Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#PM_DC_Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#DC_Electric_Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#PM_Step_Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#PM_Step_Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Step_Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Painting_Tool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Painting_Tool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Specific_Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Passive_Vision_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Passive_Vision_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Vision_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Photodiod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Photodiod">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Optical_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Piezoelectric_Accelerometer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Piezoelectric_Accelerometer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Accelerometer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Pneumatic_Cylinder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Pneumatic_Cylinder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Cylinder"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Pneumatic_Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Pneumatic_Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Pneumatic_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Pneumatic_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Contactless_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Polishing_Tool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Polishing_Tool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Machining_Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Potentiometer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Potentiometer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Angular_Position_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Pressure_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Pressure_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Exteroceptive_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Processing_Device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Processing_Device">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Propioceptive_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Propioceptive_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Sensing_Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Proximity_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Proximity_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Exteroceptive_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Pulse_Tachometer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Pulse_Tachometer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Digital_Velocity_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Pyrometer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Pyrometer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Temperature_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#RFIDs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#RFIDs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Satellite-based_Positioning_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#RGB-D_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#RGB-D_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Vision_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Radio_Receiver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Radio_Receiver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Receiver"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Radio_Transmitter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Radio_Transmitter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Transmitter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Receiver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Receiver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Communicating_Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Reed_Contacts -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Reed_Contacts">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Magnetic_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Reluctance_Variation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Reluctance_Variation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Inductive_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Resolver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Resolver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Angular_Position_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Robot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Robot"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Satellite-based_Positioning_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Satellite-based_Positioning_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Exteroceptive_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Screwdriver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Screwdriver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Assembly_Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Sensing_Device -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Sensing_Device">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Serie_Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Serie_Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Wound_Rotor_Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Servo_Accelerometer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Servo_Accelerometer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Accelerometer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Servomotor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Servomotor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Other_Electric_Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Shunt_Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Shunt_Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Wound_Rotor_Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Sonar -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Sonar">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Distance_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Speaker -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Speaker">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Transmitter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Specific_Tool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Specific_Tool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#End_Effector"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Spot_Welding_Tool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Spot_Welding_Tool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Welding_Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Step_Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Step_Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Electronic_Switching_Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Stereo_Vision_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Stereo_Vision_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Vision_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Strength_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Strength_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Propioceptive_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Structured_Light_RGB-D_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Structured_Light_RGB-D_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#RGB-D_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Sync_AC_Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Sync_AC_Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#AC_Electric_Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Synchro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Synchro">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Angular_Position_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#TOF_Camera -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#TOF_Camera">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Distance_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#TOF_RGB-D_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#TOF_RGB-D_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#RGB-D_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Tachometric_Generatrix -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Tachometric_Generatrix">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Analog_Velocity_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Temperature_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Temperature_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Exteroceptive_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Thermistor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Thermistor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Temperature_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Thermocouple -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Thermocouple">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Temperature_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Thermoresistance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Thermoresistance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Temperature_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Touch_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Touch_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Proximity_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Tracked_Robot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Tracked_Robot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Robot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Transceiver -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Transceiver">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Communicating_Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Transmitter -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Transmitter">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Communicating_Device"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Ultrasonic_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Ultrasonic_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Contactless_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Underground_Mine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Underground_Mine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Mine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Underwater_Mine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Underwater_Mine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Mine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Universal_Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Universal_Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Other_Electric_Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Var_Reluctance_Step_Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Var_Reluctance_Step_Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Step_Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Velocity_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Velocity_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Propioceptive_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Virtual_Skin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Virtual_Skin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Touch_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Vision_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Vision_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Exteroceptive_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Voltage_Sensor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Voltage_Sensor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Propioceptive_Sensor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Water_Cutting_Tool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Water_Cutting_Tool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Specific_Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Welding_Tool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Welding_Tool">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Specific_Tool"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Wheeled_Robot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Wheeled_Robot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Robot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Wound_Rotor_Engine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Wound_Rotor_Engine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#DC_Electric_Engine"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Assemble -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Assemble">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Collect_Sample -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Collect_Sample">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Crear_Lighting_Underground_Mine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Crear_Lighting_Underground_Mine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Underground_Mine"/>
+        <humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">95</humidity>
+        <lighting rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</lighting>
+        <reflectionDegree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mid</reflectionDegree>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Cut -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Cut">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Dark_Lighting_Underground_Mine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Dark_Lighting_Underground_Mine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Underground_Mine"/>
+        <humidity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</humidity>
+        <lighting rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</lighting>
+        <reflectionDegree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</reflectionDegree>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Deburr -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Deburr">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Detect_Ambient_Light_Level -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Detect_Ambient_Light_Level">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Detect_Object -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Detect_Object">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Detect_Sound -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Detect_Sound">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Determine_Orientation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Determine_Orientation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Dig -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Dig">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Drill -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Drill">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Fly -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Fly">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Grind -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Grind">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Grip -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Grip">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Heat -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Heat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Humidity_Sensor_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Humidity_Sensor_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Humidity_Sensor"/>
+        <hasSkill rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Humidity"/>
+        <isAssignedtoTask rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task1_Measure_Humidity"/>
+        <accuracy rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.1</accuracy>
+        <available rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</available>
+        <dynamicError rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</dynamicError>
+        <frequency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</frequency>
+        <inCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inCondition>
+        <lattency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</lattency>
+        <linearity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</linearity>
+        <maxMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#float">84.8</maxMeasurement>
+        <minMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#float">27.2</minMeasurement>
+        <offset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</offset>
+        <repeatability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</repeatability>
+        <resolution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</resolution>
+        <responseTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.1</responseTime>
+        <sensitivity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</sensitivity>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This humidity sensor is based on Photonic Crystal Fiber Interferometer</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Humidity_Sensor_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Humidity_Sensor_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Humidity_Sensor"/>
+        <hasSkill rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Humidity"/>
+        <isAssignedtoTask rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task1_Measure_Humidity"/>
+        <accuracy rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.9</accuracy>
+        <available rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</available>
+        <dynamicError rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</dynamicError>
+        <frequency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</frequency>
+        <inCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inCondition>
+        <lattency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</lattency>
+        <linearity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</linearity>
+        <maxMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#float">99.8</maxMeasurement>
+        <minMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.9</minMeasurement>
+        <offset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</offset>
+        <repeatability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</repeatability>
+        <resolution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</resolution>
+        <responseTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.1</responseTime>
+        <sensitivity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mid</sensitivity>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This humidity sensor is a PSS based sensor</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Acceleration -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Acceleration">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Ambient_Temperature -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Ambient_Temperature">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Angular_Position -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Angular_Position">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Angular_Velocity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Angular_Velocity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Distance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Distance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Force -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Force">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Humidity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Humidity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+        <isRequiredby rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task1_Measure_Humidity"/>
+        <isSkillof rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Humidity_Sensor_1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Inclination -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Inclination">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Internal_Temperature -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Internal_Temperature">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Lighting -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Lighting">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+        <isRequiredby rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task2_Measure_Lighting"/>
+        <isSkillof rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#SS_Stereo_Vision_Sensor"/>
+        <isSkillof rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#TOF_3D_RGBD_Sensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Linear_Position -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Linear_Position">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Linear_Velocity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Linear_Velocity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Pressure -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Pressure">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Torque -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Torque">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Voltage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Voltage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Mill -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Mill">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Move -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Move">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Navigate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Navigate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Paint -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Paint">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Polish -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Polish">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Process_Info -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Process_Info">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Receive_Info -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Receive_Info">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Recognise_Object -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Recognise_Object">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#SS_Stereo_Vision_Sensor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#SS_Stereo_Vision_Sensor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Stereo_Vision_Sensor"/>
+        <hasSkill rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Lighting"/>
+        <isAssignedtoTask rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task2_Measure_Lighting"/>
+        <accuracy rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.009</accuracy>
+        <available rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</available>
+        <dynamicError rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</dynamicError>
+        <frequency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</frequency>
+        <inCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inCondition>
+        <lattency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</lattency>
+        <linearity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</linearity>
+        <maxMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.2</maxMeasurement>
+        <minMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.34</minMeasurement>
+        <offset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</offset>
+        <repeatability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mid</repeatability>
+        <resolution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</resolution>
+        <responseTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.9</responseTime>
+        <sensitivity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mid</sensitivity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Self_Position -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Self_Position">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Speak -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Speak">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Spray -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Spray">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#TOF_3D_RGBD_Sensor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#TOF_3D_RGBD_Sensor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#TOF_RGB-D_Sensor"/>
+        <hasSkill rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Lighting"/>
+        <isAssignedtoTask rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task2_Measure_Lighting"/>
+        <accuracy rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.004</accuracy>
+        <available rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</available>
+        <dynamicError rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mid</dynamicError>
+        <frequency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</frequency>
+        <inCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</inCondition>
+        <lattency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</lattency>
+        <linearity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</linearity>
+        <maxMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.9</maxMeasurement>
+        <minMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.2</minMeasurement>
+        <offset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mid</offset>
+        <repeatability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mid</repeatability>
+        <resolution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</resolution>
+        <responseTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.5</responseTime>
+        <sensitivity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</sensitivity>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task1_Measure_Humidity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task1_Measure_Humidity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task"/>
+        <isAssignedDevice rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Humidity_Sensor_1"/>
+        <needs rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Humidity_Sensor_1"/>
+        <requires rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Humidity"/>
+        <inExecution rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</inExecution>
+        <speed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</speed>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task2_Measure_Lighting -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task2_Measure_Lighting">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task3_Measure_Angular_Position -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task3_Measure_Angular_Position">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Touch_Object -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Touch_Object">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Transmit_Info -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Transmit_Info">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Turn_Off -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Turn_Off">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Turn_On -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Turn_On">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Walk -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Walk">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Water -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Water">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Weld -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Weld">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Skill"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
