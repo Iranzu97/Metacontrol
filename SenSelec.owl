@@ -2319,7 +2319,7 @@ It also shows no errors while launching the Reasoner.</rdfs:comment>
         <isDeviceof rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Romerin"/>
         <isRequiredby rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Humidity"/>
         <isRequiredby rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task1_Measure_Humidity"/>
-        <accuracy rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.1</accuracy>
+        <accuracy rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.9</accuracy>
         <available_device rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</available_device>
         <dynamicError rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</dynamicError>
         <frequency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</frequency>
@@ -2352,13 +2352,13 @@ It also shows no errors while launching the Reasoner.</rdfs:comment>
         <isDeviceof rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Romerin"/>
         <isRequiredby rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Humidity"/>
         <isRequiredby rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Task1_Measure_Humidity"/>
-        <accuracy rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.9</accuracy>
+        <accuracy rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.1</accuracy>
         <available_device rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</available_device>
         <dynamicError rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</dynamicError>
         <frequency rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</frequency>
         <inCondition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yes</inCondition>
         <lattency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</lattency>
-        <linearity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</linearity>
+        <linearity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mid</linearity>
         <maxMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#float">99.8</maxMeasurement>
         <minMeasurement rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.9</minMeasurement>
         <offset rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</offset>
@@ -2770,7 +2770,6 @@ It also shows no errors while launching the Reasoner.</rdfs:comment>
         <requires rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Humidity_Sensor_1"/>
         <requires rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Humidity_Sensor_2"/>
         <requires rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Humidity"/>
-        <inExecution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yes</inExecution>
         <speed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</speed>
     </owl:NamedIndividual>
     
@@ -2786,7 +2785,6 @@ It also shows no errors while launching the Reasoner.</rdfs:comment>
         <requires rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Lighting"/>
         <requires rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#SS_Stereo_Vision_Sensor"/>
         <requires rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#TOF_3D_RGBD_Sensor"/>
-        <inExecution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yes</inExecution>
         <speed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</speed>
     </owl:NamedIndividual>
     
@@ -2802,7 +2800,6 @@ It also shows no errors while launching the Reasoner.</rdfs:comment>
         <requires rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Measure_Angular_Position"/>
         <requires rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Potentiometer"/>
         <requires rdf:resource="http://www.semanticweb.org/iranzu/ontologies/2021/7/SenSelec#Resolver"/>
-        <inExecution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yes</inExecution>
         <speed rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mid</speed>
     </owl:NamedIndividual>
     
